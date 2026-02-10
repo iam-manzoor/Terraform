@@ -21,6 +21,7 @@ var.environment # to access the variable
 - **OUTPUT**
   - Prints it on the console.
   - Use it to output the details of the created resources
+  - `terraform output` to print the output variables.
 ```
 output "vpc_id" {
   value = aws_vpc-sample.id
