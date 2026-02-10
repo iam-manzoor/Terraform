@@ -19,7 +19,16 @@ variable "environment" {
 var.environment # to access the variable
 ```
 - **OUTPUT**
+  - Prints it on the console.
+  - Use it to output the details of the created resources
 ```
+output "vpc_id" {
+  value = aws_vpc-sample.id
+}
+
+output "ec2_id" {
+  value = aws_instance.example.id
+}
 ```
 - **LOCALS**
 ```
