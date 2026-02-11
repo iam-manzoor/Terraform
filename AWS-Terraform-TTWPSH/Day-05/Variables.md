@@ -55,4 +55,11 @@ local.bucket_name  # Access the value
   - Tuple
 - ANY
 
+### Variable Precedence   `Low - High`
+- Default
+- Environment variable  `TF_VAR_ENVIRONMENT=stage`
+- terraform.tfvars  `values provided from file in the key value format`
+- terraform.tfvars.json `values provided in the json format`
+- *.auto.tfvars or *.auto.tfvars.json `auto loaded the files matching the pattern`
+- `-var` and `-var-file` Highest Precedence
 
