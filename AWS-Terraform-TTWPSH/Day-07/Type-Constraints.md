@@ -73,5 +73,23 @@ variable "associate_public_ip" {
     }
   ```
   - Object
+  ```
+  # Can have multiple data types.
+  # Access **var.config.region**
+  variable "config" {
+    type = object( {region = string, monitoring = bool, instance_count = number})
+    default = {
+      region = "us-east-1",
+      monitoring = true,
+      instance_count = 1
+  }
+  ```
   - Tuple
+  ```
+  # Can have multiple data types string, list, map etc..
+  variable "ingress_values" {
+    type = tuple([number,string,number])
+    default = [ 443, "tcp", 443 ]
+  }
+  ```
 - ANY
