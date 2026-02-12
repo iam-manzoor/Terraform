@@ -9,7 +9,21 @@
 - In-case if you have single file with multiple resources TF doesnt know which recource to provision first.
 - Implicit & Explict meta argument
 - Explict uses `depends_on` We mention the dependency
+```
+resource "aws_s3_bucket" "my_bucket" {
+  count = 2 #Hardcoded | Dynamic length(var.bucket_names)
+  bucket = var.bucket_names[count.index]
+  tags = var.tags
+}
 
+resource "aws_s3_bucket" "my_bucket2" {
+  for_each = var.bucket_names_set
+  bucket = each.value # each.key both are same
+  tags = var.tags
+  depends_on = [ aws_s3_bucket.my_bucket ] 
+}
+
+```
 #### count
 - Its not a function its a meat Argument
 - it helps to count the values in a `list` `set` etc..
