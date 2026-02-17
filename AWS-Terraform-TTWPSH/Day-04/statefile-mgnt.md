@@ -3,7 +3,7 @@
 - TF statefile contains lots of data so it can be stored in version control system.
 - TF state file tracks the infra created by the `terraform apply` command.
 - `terraform apply` compare the desired state with actual state.
-- You have to make lot of API calls to the provider to get the details managed by the TF.
+- You have to make lot of API calls to the provider to get the details of the resources managed by the TF.
 - To avoid that we use statefile.
 - statefile contains confedential data.
 - IMP to remember
