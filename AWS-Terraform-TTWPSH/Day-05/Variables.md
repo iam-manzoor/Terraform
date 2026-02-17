@@ -24,7 +24,7 @@ var.environment # to access the variable
   - `terraform output` to print the output variables.
 ```
 output "vpc_id" {
-  value = aws_vpc-sample.id
+  value = aws_vpc.sample.id
 }
 
 output "ec2_id" {
