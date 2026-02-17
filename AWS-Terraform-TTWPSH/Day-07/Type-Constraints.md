@@ -53,7 +53,7 @@ variable "associate_public_ip" {
     # **set** Duplicates are not allowed.
     # You can not access values using index when element is set
     # convert into list **tolist(var.allowed_instance_type)[0]**
-    # set can have ony one data type
+    # set can have any one data type
     variable "allowed_instance_type {
       type = set(string)
       default = ["t2.micro","t3.micro","t2.micro"]
