@@ -33,10 +33,19 @@ output "ec2_id" {
 ```
 - **LOCALS**
 ```
-${} -> String concatenetion
-"${var.environment}-Bucket"
+${} -> String concatenetion syntax "${var.environment}-Bucket"
+
+variable "environment" {
+  default = "Dev"
+  type = string
+}
+
+variable "s3_name" {
+  default = "my-s3-bucket"
+  type = string
+}
 locals {
-  bucket_name = "bucket-name-${var.environment}"
+  bucket_name = "${var.s3_name}-bucket-${var.environment}"
   vpc_name = "${var.environment}-VPC"
 }
 
@@ -62,4 +71,4 @@ local.bucket_name  # Access the value
 - terraform.tfvars.json `values provided in the json format`
 - *.auto.tfvars or *.auto.tfvars.json `auto loaded the files matching the pattern`
 - `-var` and `-var-file` Highest Precedence
-
+- `terraform plan -var=environment=prod`
