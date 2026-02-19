@@ -1,7 +1,7 @@
-# Terraform File Structure.
+git status# Terraform File Structure.
 
 ### Best Practice
 - TF folders and files organization
-- SS HERE
+- ![alt text](image.png)
 - Specific to the environments
-- SS HERE
+- Module structure. Values are kept in environment specific. (dev,qa,prod)
