@@ -9,5 +9,5 @@
 ### replace_triggered_by
 - Any changes to the SG rules delete the existing ec2 instance and provision new one.
 ### pre and post condition
-- Pre condition weather a aws resources is allowed to create in the region
+- Pre condition weather an aws resources is allowed to create in the region
 - post condition is the resources created successfully

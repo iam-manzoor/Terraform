@@ -1,7 +1,7 @@
 # Terraform MetaArguments
 
 ### What is terraform meta arguments?
-- Meta Arguments are provided by the TF to support arguments
+- Meta Arguments are provided by the TF to support the arguments
 - Using Meta Aruments we can implement certain logics without external scripts
 
 #### depends_on
@@ -15,7 +15,10 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = var.bucket_names[count.index]
   tags = var.tags
 }
-
+```
+#### for_each
+- Iteration of set using for_each
+```
 resource "aws_s3_bucket" "my_bucket2" {
   for_each = var.bucket_names_set
   bucket = each.value # each.key both are same
