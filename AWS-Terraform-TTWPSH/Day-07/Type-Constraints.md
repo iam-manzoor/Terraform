@@ -71,6 +71,7 @@ variable "associate_public_ip" {
       Name = dev-instance
       Created_By = "Terraform"
     }
+  }
   ```
   - Object
   ```
@@ -82,6 +83,7 @@ variable "associate_public_ip" {
       region = "us-east-1",
       monitoring = true,
       instance_count = 1
+    }
   }
   ```
   - Tuple
@@ -92,4 +94,4 @@ variable "associate_public_ip" {
     default = [ 443, "tcp", 443 ]
   }
   ```
-- ANY
+- ANY `if we dont define an datatype it would be kind of any one of the above data type`
