@@ -7,7 +7,7 @@
 #    value = aws_instance.web_instance.id
 #}
 
-Splat operator to get all the instance ids when count is used
+#Splat operator to get all the instance ids when count is used
 output "instance_id" {
     value = aws_instance.conditional_instance.*.id
 }
