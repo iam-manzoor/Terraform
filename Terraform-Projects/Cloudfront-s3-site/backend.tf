@@ -1,3 +1,4 @@
+# To store the backend make sure you have the bucket created.
 terraform {
   backend "s3" {
     bucket       = "learning-tf-state-2026"
