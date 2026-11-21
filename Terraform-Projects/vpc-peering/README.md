@@ -1,7 +1,7 @@
 # AWS VPC & VPC Peering Infrastructure with Terraform
 
 ![Terraform](https://shields.io)
-![AWS Provider](https://shields.io)
+![AWS](https://shields.io)
 ![Architecture](https://shields.io)
 
 This repository provisions two isolated Amazon Virtual Private Clouds (**VPC A** and **VPC B**) across multiple Availability Zones and establishes a bidirectional **VPC Peering** connection between them using reusable local Terraform modules and shared Amazon S3 remote state.
