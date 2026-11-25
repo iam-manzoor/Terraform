@@ -72,16 +72,16 @@ flowchart LR
 
 ```text
 .
-??? backend.tf               # S3 remote state configuration with native state locking
-??? main.tf                  # Root module orchestration
-??? outputs.tf               # Exposed cluster endpoints, ARNs, and kubeconfig helper
-??? providers.tf             # Terraform (>= 1.3) and AWS provider (~> 6.73.0) constraints
-??? variables.tf             # Root input variable definitions
-??? modules/
-    ??? eks/                 # Control plane, security groups, KMS, IRSA, add-ons & node groups
-    ??? iam/                 # Control plane and node group IAM roles
-    ??? secrets-manager/     # Conditional KMS key, Secrets Manager secrets & read IAM policy
-    ??? vpc/                 # VPC, public/private subnets, IGW, NAT Gateway & route tables
+|-- backend.tf # S3 remote state configuration with native state locking
+|-- main.tf # Root module orchestration
+|-- outputs.tf # Exposed cluster endpoints, ARNs, and kubeconfig helper
+|-- provider.tf # Terraform (>= 1.3) and AWS provider (~> 6.73.0) constraints
+|-- variables.tf # Root input variable definitions
+`-- modules/
+    |-- eks/ # Control plane, security groups, KMS, IRSA, add-ons & node groups
+    |-- iam/ # Control plane and node group IAM roles
+    |-- secrets-manager/ # Conditional KMS key, Secrets Manager secrets & read IAM policy
+    `-- vpc/ # VPC, public/private subnets, IGW, NAT Gateway & route tables
 ```
 
 ## Prerequisites
